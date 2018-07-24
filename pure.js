@@ -1,7 +1,7 @@
 // task no01
 let changeTextColor = () => {
     let text = document.getElementById('targetOfChangeColor');
-    text.style.color = '#ff95c8';
+    text.style.color = '#ffc0c2';
 };
 document.getElementById('TextColor').addEventListener('click', changeTextColor);
 
