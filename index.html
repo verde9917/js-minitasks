@@ -3,17 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        div {
+            padding: 40px;
+        }
+        .newClass{
+            background-color: #a4ff71;
+        }
+    </style>
 </head>
 <body>
-<div class="task01">
-<h2 id="targetOfChangeColor">Hello,World!</h2>
-<button type="button" id="TextColor">change text color</button>
+<div class="task no01">
+    <h2 id="targetOfChangeColor">Hello,World!</h2>
+    <button type="button" id="TextColor">change text color</button>
 </div>
-<div class="task02">
+<br>
+<div class="task no02">
     <h2 id="targetOfChangeText">Hello,World!</h2>
     <button type="button" id="firstText">change text</button>
 </div>
-<div class="task03">
+<br>
+<div class="task no03">
+    <label for="typeText">input:</label>
+    <input type="text" id="typeText">
+    <p>You typed:<span id="typedText"></span></p>
+</div>
+<br>
+<div class="task no04">
+<div id="setClass">Click here!</div>
 </div>
 <script src="pure.js"></script>
 </body>
