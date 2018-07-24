@@ -8,6 +8,14 @@ h1 {
     margin-bottom: 40px;
     color: #6dc9c8;
 }
+
+.fa-github , .fa-github:visited , .fa-github:active{
+    color:#6dc9c8;
+}
+.fa-github:hover{
+    color: #438584;
+}
+
 div {
     background-color: #ffffff;
     padding: 80px 100px;
