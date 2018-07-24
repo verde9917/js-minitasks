@@ -1,0 +1,9 @@
+div {
+    padding: 40px;
+}
+.newClass{
+    background-color: #a4ff71;
+}
+#fadeInText {
+    opacity: 0;
+}
