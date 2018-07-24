@@ -14,21 +14,27 @@ document.getElementById('firstText').addEventListener('click', changeText);
 
 // task no03
 showTypedText = () => {
-    let typed = document.getElementById('typeText').value;
-    document.getElementById('typedText').innerHTML = typed;
+    document.getElementById('typedText').innerHTML = document.getElementById('typeText').value;
 }
 document.getElementById('typeText').addEventListener('keyup',showTypedText);
 
 // task no04
 addClass = () => {
-    let targetDiv = document.getElementById('setClass');
+    let targetDiv = document.getElementById('addClass');
     targetDiv.classList.add('newClass');
 }
-document.getElementById('setClass').addEventListener('click',addClass);
+document.getElementById('addClass').addEventListener('click',addClass);
 
 // task no05
 removeClass = () => {
-    let targetDiv = document.getElementById('hasClass');
+    let targetDiv = document.getElementById('removeClass');
     targetDiv.classList.remove('newClass');
 }
-document.getElementById('hasClass').addEventListener('click',removeClass);
+document.getElementById('removeClass').addEventListener('click',removeClass);
+
+// task no06
+toggleClass = () => {
+    let targetDiv = document.getElementById('toggleClass');
+    targetDiv.classList.toggle('newClass');
+}
+document.getElementById('toggleClass').addEventListener('click',toggleClass);
