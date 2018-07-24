@@ -57,3 +57,18 @@ let fadeIn = () => {
 document.getElementById('fadeInButton').addEventListener('click',fadeIn);
 
 // task 08
+let fadeOut = () => {
+    let begin = new Date();
+    let target = document.getElementById('fadeOutText');
+    let Time = 1000;
+    let id = setInterval(() => {
+        let current = new Date() - begin;
+        if (current > Time){
+            clearInterval(id);
+            current = Time;
+            target.style.visibility= 'hidden';
+        }
+        target.style.opacity = 1 - current / Time;
+    }, 10);
+};
+document.getElementById('fadeOutButton').addEventListener('click',fadeOut);
