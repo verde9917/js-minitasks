@@ -16,28 +16,28 @@ document.getElementById('firstText').addEventListener('click', changeText);
 let showTypedText = () => {
     document.getElementById('typedText').innerHTML = document.getElementById('typeText').value;
 };
-document.getElementById('typeText').addEventListener('keyup',showTypedText);
+document.getElementById('typeText').addEventListener('keyup', showTypedText);
 
 // task no04
 let addClass = () => {
     let targetDiv = document.getElementById('addClass');
     targetDiv.classList.add('newClass');
 };
-document.getElementById('addClass').addEventListener('click',addClass);
+document.getElementById('addClass').addEventListener('click', addClass);
 
 // task no05
 let removeClass = () => {
     let targetDiv = document.getElementById('removeClass');
     targetDiv.classList.remove('newClass');
 };
-document.getElementById('removeClass').addEventListener('click',removeClass);
+document.getElementById('removeClass').addEventListener('click', removeClass);
 
 // task no06
 let toggleClass = () => {
     let targetDiv = document.getElementById('toggleClass');
     targetDiv.classList.toggle('newClass');
 };
-document.getElementById('toggleClass').addEventListener('click',toggleClass);
+document.getElementById('toggleClass').addEventListener('click', toggleClass);
 
 // task no07
 // 参考 : https://q-az.net/without-jquery-fadein-fadeout-slideup-slidedown/
@@ -47,14 +47,14 @@ let fadeIn = () => {
     let Time = 1000;
     let id = setInterval(() => {
         let current = new Date() - begin;
-        if (current > Time){
+        if (current > Time) {
             clearInterval(id);
             current = Time;
         }
         target.style.opacity = current / Time;
     }, 10);
 };
-document.getElementById('fadeInButton').addEventListener('click',fadeIn);
+document.getElementById('fadeInButton').addEventListener('click', fadeIn);
 
 // task 08
 let fadeOut = () => {
@@ -63,12 +63,12 @@ let fadeOut = () => {
     let Time = 1000;
     let id = setInterval(() => {
         let current = new Date() - begin;
-        if (current > Time){
+        if (current > Time) {
             clearInterval(id);
             current = Time;
-            target.style.visibility= 'hidden';
+            target.style.visibility = 'hidden';
         }
         target.style.opacity = 1 - current / Time;
     }, 10);
 };
-document.getElementById('fadeOutButton').addEventListener('click',fadeOut);
+document.getElementById('fadeOutButton').addEventListener('click', fadeOut);
