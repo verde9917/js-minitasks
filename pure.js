@@ -44,15 +44,20 @@ document.getElementById('toggleClass').addEventListener('click', toggleClass);
 let fadeIn = () => {
     let begin = new Date();
     let target = document.getElementById('fadeInText');
+    target.style.display = 'block';
     let Time = 1000;
-    let id = setInterval(() => {
-        let current = new Date() - begin;
-        if (current > Time) {
-            clearInterval(id);
-            current = Time;
-        }
-        target.style.opacity = current / Time;
-    }, 10);
+    if (target.style.opacity == 0) {
+        let id = setInterval(() => {
+            let current = new Date() - begin;
+            if (current > Time) {
+                clearInterval(id);
+                current = Time;
+                target.style.opacity = 1;
+                console.log(target.style.opacity);
+            }
+            target.style.opacity = current / Time;
+        }, 10);
+    }
 };
 document.getElementById('fadeInButton').addEventListener('click', fadeIn);
 
@@ -66,7 +71,7 @@ let fadeOut = () => {
         if (current > Time) {
             clearInterval(id);
             current = Time;
-            target.style.visibility = 'hidden';
+            target.style.display = 'none';
         }
         target.style.opacity = 1 - current / Time;
     }, 10);
